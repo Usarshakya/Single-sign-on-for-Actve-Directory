@@ -1,6 +1,6 @@
 class Auth::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def saml
-  	binding.pry
+  	# binding.pry
     raise request.env["omniauth.auth"].to_yaml
     response = OneLogin::RubySaml::Response.new(params[:SAMLResponse])
 
